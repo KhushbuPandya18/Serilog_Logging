@@ -16,6 +16,9 @@ namespace LoggingWithSerilogApp
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            //Initialize Logger
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
         }
 
         public IConfiguration Configuration { get; }

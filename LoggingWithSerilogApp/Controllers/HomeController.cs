@@ -26,7 +26,7 @@ namespace LoggingWithSerilogApp.Controllers
             }
             catch (DivideByZeroException ex)
             {
-                _logger.LogWarning(ex, "An exception occured while dividing two numbers");
+                _logger.LogWarning(ex, "An exception occurred while dividing two numbers");
             }
 
             return View();
